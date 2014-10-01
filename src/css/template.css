@@ -1,3 +1,12 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
 .navbar{
-  height: 117px;
+	height: 140px;
+}
+
+.navbar-right{
+	padding-top: 95px;
+	font-size: 30px;
 }
