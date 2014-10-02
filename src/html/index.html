@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<title>OOD Template</title>
+</HEAD>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="..\..\libs\bootstrap-3.2.0-dist\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="..\..\src\css\template.css">
+	<script type="text/javascript" src="..\..\libs\jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="..\..\libs\bootstrap-3.2.0-dist\js\bootstrap.min.js"></script>
+	
+	<!--Header-->
+	<script>
+	$(document).ready(function(){
+		$(".header_load").load("../../src/html/header.html");
+	});
+	</script>
+	<div class="header_load"></div>
+
+	<!--Specific Page Information-->
+
+	<!--Footer-->
+	<script>
+		$(document).ready(function(){
+			$(".footer_load").load("../../src/html/footer.html");
+		});
+	</script>
+	<div class="footer_load"></div>
+</body>
+</html>

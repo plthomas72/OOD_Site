@@ -11,6 +11,9 @@
 	font-size: 30px;
 }
 
+iframe[seamless]{
+  border: none;
+}
 
 /* Sticky footer styles*/
 html,
