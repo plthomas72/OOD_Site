@@ -1,6 +1,6 @@
 *{
 	padding: 0px;
-	margin: 0px;
+	margin: 0px auto;
 }
 .navbar{
 	height: 140px;
@@ -40,7 +40,32 @@ body {
 	background:#F0F0F0;
 	text-align: center;
 }
+@media(min-width: 400px){
+  .navbar-toggle{
+    display: none;
+  }
+  .navbar-right{
+    display: block;
+  }
+}
 
-@media (min-width: 1199px;) and (max-width: 100%){
+@media (min-width: 400px){
+  .navbar-right .dropdown-menu{
+    right: 0;
+    left: auto;
+  }
+}
 
+
+}
+@media only screen and (max-width: 1000px){
+  .navbar-right{font-size: 1.3em;}
+}
+
+@media only screen and (max-width: 900px){
+  .navbar-right{font-size: 1rem;}
+}
+
+@media only screen and (max-width: 200px ){
+  .navbar-right{font-size: .5em;}
 }
