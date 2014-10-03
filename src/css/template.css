@@ -9,7 +9,6 @@
 .navbar-right{
 	padding-top: 95px;
 	font-size: 23px;
-
 }
 
 iframe[seamless]{
@@ -41,20 +40,32 @@ body {
 	background:#F0F0F0;
 	text-align: center;
 }
+@media(min-width: 775px){
+  .navbar-toggle{
+    display: none;
+  }
+  .navbar-right{
+    display: block;
+  }
+}
 
-@media only screen and (max-width: 950px){
+@media (min-width: 775px){
+  .navbar-right .dropdown-menu{
+    right: 0;
+    left: auto;
+  }
+}
+
+
+}
+@media only screen and (max-width: 1000px){
   .navbar-right{font-size: 21px;}
 }
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 900px){
   .navbar-right{font-size: 18px;}
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 800px ){
   .navbar-right{font-size: 16px;}
 }
-
-
-
-
-
