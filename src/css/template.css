@@ -23,7 +23,7 @@ iframe[seamless]{
 #footer {
 	background:#F0F0F0;
 	text-align: center;
-	
+
 }
 
 html, body {
@@ -95,4 +95,28 @@ height: 4em;
 
 @media only screen and (max-width: 800px ){
   .navbar-right{font-size: 16px;}
+}
+
+
+
+/* 3 Columns*/
+
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #F0F0F0;
+  background-color: #F0F0F0;
+  border: 1px solid #ddd;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
