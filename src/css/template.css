@@ -119,7 +119,7 @@ height: 4em;
 
 /* 3 Columns MEDIA QUERIES*/
 
-@media screen and (min-width: 810px ){
+@media screen and (min-width: 992px ){
   
 .row {
     display: table;
@@ -133,13 +133,13 @@ height: 4em;
 }
 
 
-@media screen and (min-width: 800px ){
+@media screen and (min-width: 600px ){
 .columnbar {
   font-size: 19px;
 }
 }
 
-@media screen and (min-width: 810px ){
+@media screen and (min-width: 992px ){
 .columnbar {
   font-size: 16px;
 }
