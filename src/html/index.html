@@ -6,6 +6,9 @@
 	<script type="text/javascript" src="../../libs/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="../../libs/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../src/css/template.css">
+  <script src="../../libs/zabuto_calendar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../libs/zabuto_calendar.min.css">
+
 </HEAD>
 
 <body>
@@ -71,23 +74,39 @@
 
 
   
-      <div class="row">
-        <div class="col-md-4">
- 			<h3>News</h3>
-        	<h4>Sunday, October 5th</h4>
-        	<p>Practice is canceled due to rain</p>
-        	<h4>Monday, October 10th</h4>
-        	<p>Something other about practicing</p>
-        </div>
-        <div class="col-md-4">
+<div class="container container-xs-height">
+    <div class="row row-xs-height">
+        <div class="col-md-4">  
+           <h3>News</h3>
+           <h4>Sunday, October 5th</h4>
+           <p>Practice is canceled due to rain</p>
+           <h4>Monday, October 10th</h4>
+           <p>Something other about practicing</p>
+           <h4>Monday, October 19th</h4>
+           <p>Additional Testing of website</p>
+           <h4>Monday, October 21th</h4>
+           <p>New uniforms</p></div>
+        <div class="col-md-4">  
 			<h3>About</h3>
 			<p>Opportunity on Deck is organized for the purpose of providing low-income students in Des Moines with opportunities to participate in organized sports.</p>
+      <p>Founded by Dylan DeClerck, Opportunity on Deck was officially incorporated on March 3, 2014, but began in February of 2012. Opportunity on Deck is organized exclusively for charitable and educational purposes within the meaning of section 501(c)(3) of the Internal Revenue Code. More specifically, Opportunity on Deck is organized for the charitable purpose of providing young students in low-income neighborhoods with opportunities to participate in organized sports.
         </div>
-        <div class="col-md-4">
-        	<h3>Calender</h3> 
-        	<p>Some sort of calender would go here</p>
-        </div>
+         <div class="col-md-4">  
+          <h3>Calendar</h3>
+        	<div id="my-calendar"></div>
+
+          <script type="application/javascript">
+          $(document).ready(function () {
+          $("#my-calendar").zabuto_calendar({show_previous: false, today: true, showdays: true, language: "en",
+            ajax: {
+              url: "../../libs/show_data.php",
+              modal: true
+              }
+       });
+    });
+          </script></div>
       </div>
+    </div>
 
 
 	<!--Here to make footer work-->
