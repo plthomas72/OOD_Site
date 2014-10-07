@@ -157,3 +157,16 @@ height: 4em;
 article{
   max-width: 1000px;
 }
+
+.sponsors{
+  max-width: 1000px;
+  min-width: 0px;
+  background-color: #F0F0F0;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.sponsors img{
+  margin: 19.5px;
+}
