@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+	<title>OOD Template</title>
+	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="../../libs/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="../../libs/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../src/css/template.css">
+  <script src="../../libs/zabuto_calendar.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../libs/zabuto_calendar.min.css">
+
+</HEAD>
+
+<body>
+	
+	<!--Here to make footer work-->
+	<div class="wrapper">
+
+	<!--Header-->
+	<script>
+	$(document).ready(function(){
+		$(".header_load").load("../../src/html/header.html");
+	});
+	</script>
+	<div class="header_load navbar"></div>
+
+	<!--Page content-->
+	
+
+
+	<!--Here to make footer work-->
+	<div class="push"></div>
+
+
+</div>
+	<!--Footer-->
+	<script>
+		$(document).ready(function(){
+			$(".footer_load").load("../../src/html/footer.html");
+		});
+	</script>
+	<div class="footer_load" id="footer"></div>
+</body>
+</html>

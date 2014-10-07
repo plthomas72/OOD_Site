@@ -33,7 +33,6 @@ hr {
 #footer {
 	background:#F0F0F0;
 	text-align: center;
-
 }
 
 html, body {
@@ -155,4 +154,6 @@ height: 4em;
 }
 }
 
-
+article{
+  max-width: 1000px;
+}
