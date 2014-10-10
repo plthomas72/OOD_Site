@@ -27,11 +27,6 @@
   position: relative;
 }
 
-#myCarousel{
-  z-index: -10;
-  position: relative;
-}
-
 iframe[seamless]{
   border: none;
 }
@@ -60,7 +55,7 @@ height: 100%;
 min-height: 100%;
 height: auto !important;
 height: 100%;
-margin: 0 auto -4em;
+margin: 0 auto -7em;
 }
 .footer, .push {
 height: 7em;
@@ -95,6 +90,9 @@ height: 7em;
   z-index: 10;
 }
 
+.carousel-control{
+  z-index: 100;
+}
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 350px;
