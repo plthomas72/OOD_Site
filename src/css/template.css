@@ -30,6 +30,7 @@
 
 .navbar, .navbar-collapse{
   border: none;
+  margin: none;
 }
 
 hr { 
@@ -125,7 +126,7 @@ height: 7em;
 
 @media only screen and (max-width: 800px){
   .navbar{
-    height: auto;
+    height: auto !important;
     min-height: 140px;
     z-index: 10;
   }
