@@ -7,6 +7,7 @@
 
 .navbar{
 	height: 140px;
+  background-color: #f0f0f0;
 }
 
 .navbar-right{
@@ -25,6 +26,10 @@
   background-color: #f0f0f0;
   z-index: -5;
   position: relative;
+}
+
+.navbar, .navbar-collapse{
+  border: none;
 }
 
 hr { 
@@ -118,6 +123,13 @@ height: 7em;
   .navbar-right{font-size: 16px;}
 }
 
+@media only screen and (max-width: 800px){
+  .navbar{
+    height: auto;
+    min-height: 140px;
+    z-index: 10;
+  }
+}
 
 
 /* 3 Columns*/
