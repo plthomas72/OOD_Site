@@ -31,6 +31,7 @@
 .navbar, .navbar-collapse{
   border: none;
   margin: none;
+  padding: none;
 }
 
 hr { 
@@ -130,6 +131,22 @@ height: 7em;
     min-height: 140px;
     z-index: 10;
   }
+  .in{
+    z-index: 11;
+    margin-top: 0px;
+  }
+  .navbar-toggle{
+    z-index: 12;
+  }
+  .nav.navbar-nav.navbar-right{
+    padding-top: 0px;
+  }
+  .in a{
+    font-size: 24px;
+  }
+}
+.navbar-header{
+  height: 140px;
 }
 
 
