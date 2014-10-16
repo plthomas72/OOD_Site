@@ -22,11 +22,6 @@
   right: 5px;
 }
 
-.in{
-  background-color: #f0f0f0;
-  z-index: -5;
-  position: relative;
-}
 
 .navbar, .navbar-collapse{
   border: none;
