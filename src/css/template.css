@@ -114,18 +114,30 @@ height: 7em;
 
 }
 @media only screen and (max-width: 1000px){
-  .navbar-right{font-size: 21px;}
+  .navbar-right{font-size: 20px;}
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 924px){
+  .navbar-right{font-size: 20px;}
+}
+
+@media only screen and (max-width: 877px ){
   .navbar-right{font-size: 18px;}
 }
 
-@media only screen and (max-width: 800px ){
+@media only screen and (max-width: 835px){
   .navbar-right{font-size: 16px;}
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 790px){
+  .navbar-right{font-size: 14px;}
+}
+
+@media only screen and (max-width: 786px){
+  .navbar-right{font-size: 14px;}
+}
+
+@media only screen and (max-width: 760px){
   .navbar{
     height: auto !important;
     min-height: 140px;
