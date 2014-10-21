@@ -221,7 +221,10 @@ article{
   margin: 19.5px;
 }
 
-
+.csponsor h2{
+  font-family: 'Tangerine', serif;
+  font-size: 48px;
+}
 .csponsor img{
   margin: 0.2%;
   margin-right: 3%;  
@@ -230,5 +233,6 @@ article{
 }
 .csponsor p{
     text-align:justify;
+    font-family: 'Droid Serif', serif;
 }
-}
+
