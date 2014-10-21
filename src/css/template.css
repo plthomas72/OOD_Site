@@ -220,3 +220,15 @@ article{
 .sponsors img{
   margin: 19.5px;
 }
+
+
+.csponsor img{
+  margin: 0.2%;
+  margin-right: 3%;  
+  width: 230px;
+  float:left;
+}
+.csponsor p{
+    text-align:justify;
+}
+}
