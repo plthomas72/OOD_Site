@@ -45,31 +45,41 @@
 			<p>Becoming a sponsor is easy, just fill out the form below and we will contact you regarding sponsorship.</p>
 		</div>
 		<hr >
-		<div class="sponsor-form">
-			<form name="input" action="http://forms.brace.io/voelker.keith@gmail.com" method="POST" style="width: 50%; text-align: center;">	
+		<div class="sponsor-form container well">
+			<form name="input" action="http://forms.brace.io/voelker.keith@gmail.com" method="POST" style="width: 50%; clear: both; text-align: center; float: left;">	
 				<div class="form-group" style="clear: both; text-align: left;">
-				Company name: <br>
-				<input type="text" name="companyname" class="form-control"><br>
+					<label for="Company_Name">Company name:</label> <br>
+					<input type="text" name="Company_Name" class="form-control"><br>
 				</div>
-				<div class="form-group" style="float: left; width: 45%; text-align: left;">
-				First name: <br>
-				<input type="text" name="firstname" class="form-control"><br>
+				<div class="form-group" style="clear: both; text-align: left;">
+					<label for="First_Name">First name:</label> <br>
+					<input type="text" name="First_Name" class="form-control"><br>
 				</div>
-				<div class="form-group" style="float: right; width: 45%; text-align: left;">
-				Last name: <br>
-				<input type="text" name="lastname" class="form-control"><br>
+				<div class="form-group" style="clear: both; text-align: left;">
+					<label for="Last_Name">Last name:</label> <br>
+					<input type="text" name="Last_Name" class="form-control"><br>
 				</div>
-				<div class="form-group" style="float: left; width: 45%; text-align: left;">
-				Email: <br>
-				<input type="text" name="email" class="form-control"><br>
+				<div class="form-group" style="clear: both; text-align: left;">
+					<label for="Email">Email:</label> <br>
+					<input type="text" name="Email" class="form-control"><br>
 				</div>
-				<div class="form-group" style="float: right; width: 45%; text-align: left;">
-				Phone: <br>
-				<input type="text" name="phone" class="form-control"><br>
+				<div class="form-group" style="clear: both; text-align: left;">
+					<label for="Phone">Phone:</label><br>
+					<input type="text" name="Phone" class="form-control"><br>
 				</div>
-				<input type="hidden" name="_next" value="http://www.iastate.edu">
-				<input type="submit" value="Send Registration">
+				<div class="form-group" style="clear: both; text-align: left;">
+					<label for="Message">Why would you like to become a sponsor?</label><br>
+					<textarea class="form-control message-area" cols="20" data-val="true" data-val-required="Please provide a message." name="Message" rows="2" style="min-width: 100%; max-width: 100%;"></textarea><br>
+				</div>
+				<input type="hidden" name="_subject" value="Someone is interested in becoming a sponsor!" />
+				<button class="btn btn-primary send" type="submit" style="clear: both; text-align: left;">
+                	<span class="glyphicon glyphicon-send"></span>
+            	</button>
 			</form>
+			<div style="float: right; width: 45%;">
+				<h1>Thank You!</h1>
+				<p>Thank you for your interest in becomming a sponsor, it means a lot to us! Please fill out the form on the left and we will be in contact with you to go over the next steps in becomming a sponsor for Opportunity On Deck.</p>
+			</div>
 		</div>
 	</div>
 
