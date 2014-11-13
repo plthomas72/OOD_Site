@@ -9,6 +9,7 @@
   <script src="../../libs/zabuto_calendar.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../../libs/zabuto_calendar.min.css">
 
+
 </HEAD>
 
 <body>
@@ -76,7 +77,7 @@
   
 <div class="container container-xs-height">
     <div class="row row-xs-height">
-        <div class="col-md-4 col-break">  
+        <div class="col-md-4 col-break">
            <h3>News</h3>
            <h4>Sunday, October 5th</h4>
            <p>Practice is canceled due to rain</p>
@@ -97,18 +98,62 @@
          <div class="col-md-4 col-break">  
           <h3>Calendar</h3>
         	<div id="my-calendar"></div>
+          <div id="date-popover-content" class="popover-content"></div>
+          <script>
+  var eventName = '[';
+  var eventData = [];
+  var gclaData = 'https://www.google.com/calendar/feeds/po8gdct3mj6bo3cd33tekct79g%40group.calendar.google.com/public/full?alt=json';
 
-          <script type="application/javascript">
-          $(document).ready(function () {
-          $("#my-calendar").zabuto_calendar({show_previous: false, today: true, showdays: true, language: "en",
-            ajax: {
-              url: "../../libs/show_data.php",
-              modal: true
-              }
-       });
-    });
+  $.getJSON(gclaData,function(data){
+   for(var i = 0; i < data.feed.entry.length; i++){
+     eventName += '{';
+     //grab date
+     eventName += '"date":"';
+     eventName += data.feed.entry[i].published.$t.split('T')[0]+'\",';
+     //badge
+     eventName += '"badge":true,';
+     //grab event title
+     eventName += '"title":"';
+     eventName += data.feed.entry[i].title.$t+'\",';
+     //grab event body
+     eventName += '"body":"';
+     eventName += data.feed.entry[i].content.$t+'\",';
+     //add blank footer
+     eventName += '\"footer\":\" \",';
+     //add class
+     eventName += '\"classname\":\"purple-event\"';
+     eventName += '}';
+      if(i < data.feed.entry.length-1){
+        eventName += ',';
+      }
+      //eventData[i] = eventName;
+  }
+  eventName += ']';
+
+  test = $.parseJSON('[' + eventName + ']');
+
+  $.ajax({
+    type: "POST",
+    url: 'test.php',
+    data: {eventName: eventName},
+    success: function(data){
+      console.log(data);
+    }
+  });
+
+$(document).ready(function () {
+    $("#my-calendar").zabuto_calendar({
+        ajax: {
+          url: "calevents.php",
+          modal: true
+        }
+      });
+  });
+});
+
           </script></div>
       </div>
+
 
       <div class="container-fluid">
         <h3 style="text-align: center">Our Sponsors</h3>

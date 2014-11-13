@@ -9,14 +9,49 @@
 	<link rel="stylesheet" type="text/css" href="..\..\src\css\template.css">
 	<script type="text/javascript" src="..\..\libs\jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="..\..\libs\bootstrap-3.2.0-dist\js\bootstrap.min.js"></script>
-	
-	<!--Header-->
-	<script>
-	$(document).ready(function(){
-		$(".header_load").load("../../src/html/header.html");
-	});
-	</script>
-	<div class="header_load"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+          <script>
+  var eventName = '';
+  var test;
+  var eventData = [];
+  var gclaData = 'https://www.google.com/calendar/feeds/po8gdct3mj6bo3cd33tekct79g%40group.calendar.google.com/public/full?alt=json';
+
+  $.getJSON(gclaData,function(data){
+   for(var i = 0; i < data.feed.entry.length; i++){
+     eventName += '{';
+     //grab date
+     eventName += '"date":"';
+     eventName += data.feed.entry[i].published.$t.split('T')[0]+'\",';
+     //badge
+     eventName += '"badge":true,';
+     //grab event title
+     eventName += '"title":"';
+     eventName += data.feed.entry[i].title.$t+'\",';
+     //grab event body
+     eventName += '"body":"';
+     eventName += data.feed.entry[i].content.$t+'\",';
+     //add blank footer
+     eventName += '\"footer\":\" \",';
+     //add class
+     eventName += '\"classname\":\"purple-event\"';
+     eventName += '}';
+      if(i < data.feed.entry.length-1){
+        eventName += ',';
+      }
+     eventData[i] = eventName;
+  }
+    test = $.parseJSON('[' + eventName + ']');
+    test = [
+      {"date":"2014-10-11", "badge":true}
+    ];
+    $('#outputTitle').append(eventName);
+        
+          });
+
+
+</script>
+<div id="outputTitle"></div>
 
 	<!--Footer-->
 	<script>
