@@ -79,17 +79,25 @@
     <div class="row row-xs-height">
         <div class="col-md-4 col-break">
            <h3>News</h3>
-           <h4>Sunday, October 5th</h4>
-           <p>Practice is canceled due to rain</p>
-            <hr>
-           <h4>Monday, October 10th</h4>
-           <p>Something other about practicing</p>
            <hr>
-           <h4>Monday, October 19th</h4>
-           <p>Additional Testing of website</p>
-           <hr>
-           <h4>Monday, October 21th</h4>
-           <p>New uniforms</p></div>
+           <div id="newsSection"></div>
+           <script>
+              var title = '';
+              var time = '';
+              var news = '';
+              var newsData = '';
+              var gnewsData = 'https://www.google.com/calendar/feeds/0mi3ahkmmkhlhglrh12gj3gln4%40group.calendar.google.com/public/full?&orderby=starttime&max-results=5&sortorder=ascending&futureevents=true&alt=json';
+
+              $.getJSON(gnewsData, function(data){
+                for(var j = 0; j < data.feed.entry.length; j++){
+                  title = data.feed.entry[j].title.$t+'</br>';
+                  time = data.feed.entry[j].published.$t.split('T')[0]+'</br>';
+                  news = data.feed.entry[j].content.$t+'</br>';
+                  newsData += '<h3>'+title+'</h3>'+'<h4>'+time+'</h4>'+'<p>'+news+'</p><hr>';
+                };
+                document.getElementById('newsSection').innerHTML = newsData;
+              });
+           </script></div>
         <div class="col-md-4 col-break">  
 			<h3>About</h3>
 			<p>Opportunity on Deck is organized for the purpose of providing low-income students in Des Moines with opportunities to participate in organized sports.</p>
