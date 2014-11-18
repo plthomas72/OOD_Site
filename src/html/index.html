@@ -86,12 +86,12 @@
               var time = '';
               var news = '';
               var newsData = '';
-              var gnewsData = 'https://www.google.com/calendar/feeds/0mi3ahkmmkhlhglrh12gj3gln4%40group.calendar.google.com/public/full?&orderby=starttime&max-results=5&sortorder=ascending&futureevents=true&alt=json';
+              var gnewsData = 'https://www.google.com/calendar/feeds/bqrdg73hma2bd1n3b9o6fesab0%40group.calendar.google.com/public/basic?&orderby=starttime&max-results=5&sortorder=ascending&futureevents=true&alt=json';
 
               $.getJSON(gnewsData, function(data){
                 for(var j = 0; j < data.feed.entry.length; j++){
                   title = data.feed.entry[j].title.$t+'</br>';
-                  time = data.feed.entry[j].published.$t.split('T')[0]+'</br>';
+                  time = data.feed.entry[j].published.$t.split('T')[0]+'';
                   news = data.feed.entry[j].content.$t+'</br>';
                   newsData += '<h3>'+title+'</h3>'+'<h4>'+time+'</h4>'+'<p>'+news+'</p><hr>';
                 };
@@ -110,7 +110,7 @@
           <script>
   var eventName = '[';
   var eventData = [];
-  var gclaData = 'https://www.google.com/calendar/feeds/po8gdct3mj6bo3cd33tekct79g%40group.calendar.google.com/public/full?alt=json';
+  var gclaData = 'https://www.google.com/calendar/feeds/po8gdct3mj6bo3cd33tekct79g%40group.calendar.google.com/public/basic?alt=json';
 
   $.getJSON(gclaData,function(data){
    for(var i = 0; i < data.feed.entry.length; i++){
@@ -125,7 +125,7 @@
      eventName += data.feed.entry[i].title.$t+'\",';
      //grab event body
      eventName += '"body":"';
-     eventName += data.feed.entry[i].content.$t+'\",';
+     eventName += data.feed.entry[i].content.$t.split('Event Description:')[1]+'\",';
      //add blank footer
      eventName += '\"footer\":\" \",';
      //add class
@@ -137,8 +137,6 @@
       //eventData[i] = eventName;
   }
   eventName += ']';
-
-  test = $.parseJSON('[' + eventName + ']');
 
   $.ajax({
     type: "POST",
