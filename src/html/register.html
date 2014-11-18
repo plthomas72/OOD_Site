@@ -26,7 +26,24 @@
 
 	<!--Page content-->
 <div class="container">
+<input type="button" name="register" value="Register Your Child" onClick="showRegistration();" />
+<input type="button" name="mailingList" value="Register To Our Mailing List" onClick="mailingListRegistration();" />
+<script>
+	function showRegistration(){
+		document.getElementById('mailingListRegistration').style.display="none";
+		document.getElementById('childRegistration').style.display="block";
+	}
+	function mailingListRegistration(){
+		document.getElementById('childRegistration').style.display="none";
+		document.getElementById('mailingListRegistration').style.display="block";
+	}
+</script>
+<div id="childRegistration" style="display:none;">
 	<iframe height="1331" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://ood.wufoo.com/embed/mh8sgm713cwz5l/"><a href="https://ood.wufoo.com/forms/mh8sgm713cwz5l/">Fill out my Wufoo form!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"><span class="notranslate">Use <a href="http://www.wufoo.com/gallery/templates/">Wufoo templates</a> to make your own HTML forms.</span></div>
+</div>
+<div id="mailingListRegistration" style="display:none;">
+	<iframe height="340" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="https://ood.wufoo.com/embed/z1vik54n02uydez/"><a href="https://ood.wufoo.com/forms/z1vik54n02uydez/">Fill out my Wufoo form!</a></iframe><div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;"><span class="notranslate">Use <a href="http://www.wufoo.com/gallery/templates/">Wufoo templates</a> to make your own HTML forms.</span></div>
+</div>
 </div>
 	<!--Here to make footer work-->
 	<div class="push"></div>
