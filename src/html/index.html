@@ -91,7 +91,7 @@
               $.getJSON(gnewsData, function(data){
                 for(var j = 0; j < data.feed.entry.length; j++){
                   title = data.feed.entry[j].title.$t+'</br>';
-                  time = data.feed.entry[j].published.$t.split('T')[0]+'';
+                  //time = data.feed.entry[j].published.$t.split('T')[0]+'';
                   news = data.feed.entry[j].content.$t+'</br>';
                   newsData += '<h3>'+title+'</h3>'+'<h4>'+time+'</h4>'+'<p>'+news+'</p><hr>';
                 };
