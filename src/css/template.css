@@ -259,10 +259,15 @@ input.text {
 iframe.iframeWidth {
   width: 510px;
 }
+
 }
 
-.popover-content {
-  z-index: 1000;
+@media screen and (max-width: 760px ){
+.modal {
+  z-index: 100;
 }
+}
+
+
 
 >>>>>>> origin/master
