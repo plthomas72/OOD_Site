@@ -261,5 +261,8 @@ iframe.iframeWidth {
 }
 }
 
+.popover-content {
+  position: 0;
+}
 
 >>>>>>> origin/master
